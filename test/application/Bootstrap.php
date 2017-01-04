@@ -11,7 +11,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
     }
     
     public function _initTimeZone(Yaf_Dispatcher $dispatcher) {
-        $config = new Yaf_Config_Ini(CONF_FILE);
+        $config = Yaf_Application::app()->getConfig();
         $timeZone = $config->timezone;
         date_default_timezone_set($timeZone);
     }
