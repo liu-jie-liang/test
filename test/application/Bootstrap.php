@@ -5,7 +5,22 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
     public function _initConfig(Yaf_Dispatcher $dispatcher) {
         
     }
+    
     public function _initPlugin(Yaf_Dispatcher $dispatcher) {
+        
+    }
+    
+    public function _initTimeZone(Yaf_Dispatcher $dispatcher) {
+        $config = new Yaf_Config_Ini(CONF_FILE);
+        $timeZone = $config->timezone;
+        date_default_timezone_set($timeZone);
+    }
+    
+    public function _initSession(Yaf_Dispatcher $dispatcher) {
+        
+    }
+    
+    public function _initRouter(Yaf_Dispatcher $dispather) {
         
     }
 }
