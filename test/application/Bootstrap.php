@@ -26,3 +26,4 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
         $dispatcher->registerPlugin($userPlugin);
     }
 }
+

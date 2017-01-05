@@ -17,7 +17,12 @@ class Db
     protected function __clone() {}
     
     public function __callStatic($name, $args) {
-        return call_user_func_array(array(self::db(), $name), $args);
+        // 避免在执行sql语句之前连接数据库，提高性能
+        if (!empty(self::$db)) {
+            return call_user_func_array(array(self::db(), $name), $args);
+        } else {
+            throw new Yaf_Exception("db static call error");
+        }
     }
     
     protected static function db() {
@@ -167,11 +172,13 @@ class Db
         return $ret;
     }
 
+    // sql语句安全性检测
     public static function checkquery($sql)
     {
         return SqlSafeCheck::checkquery($sql);
     }
 
+    // 实现escape_string功能的替代方法
     public function mysql_escape_mimic($inp)
     {
         if (is_array($inp)) {

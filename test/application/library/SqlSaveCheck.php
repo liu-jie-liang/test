@@ -131,3 +131,4 @@ class SqlSafeCheck
         return 1;
     }
 }
+

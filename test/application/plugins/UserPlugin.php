@@ -25,3 +25,4 @@ class UserPlugin extends Yaf_Plugin_Abstract {
         
     }
 }
+

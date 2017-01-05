@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * PHP版本小于5.3.0时使用
+ * @author liujieliang
+ *
+ */
+
 final class Driver_Mysql
 {
     private $config;
