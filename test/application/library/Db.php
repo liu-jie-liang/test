@@ -22,11 +22,17 @@ class Db
     
     protected static function db() {
         if (empty(self::$db)) {
-            $driver = Yaf_Application::app()->getConfig()->db->driver;
-            if ($driver == 'mysqli') {
-                self::$db = new Driver_Mysqli();
-            } else if ($driver == 'mysql') {
-                self::$db = new Driver_Mysql();
+            $config = Yaf_Application::app()->getConfig();
+            $type = $config->db->type;
+            $driver = $config->db->driver;
+            if ($type == 'mysql') {
+                if ($driver == 'pdo') {
+                    self::$db = new Driver_Pdo();
+                } else if ($driver == 'mysql') {
+                    self::$db = new Driver_Mysql();
+                } else {
+                    self::$db = new Driver_Mysqli();
+                }
             }
             return self::$db;
         }
