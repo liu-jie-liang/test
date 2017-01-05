@@ -3,11 +3,8 @@
 /* bootstrap class should be defined under ./application/Bootstrap.php */
 class Bootstrap extends Yaf_Bootstrap_Abstract {
     public function _initConfig(Yaf_Dispatcher $dispatcher) {
-        
-    }
-    
-    public function _initPlugin(Yaf_Dispatcher $dispatcher) {
-        
+        $config = Yaf_Application::app()->getConfig();
+        Yaf_Registry::set('config', $config);
     }
     
     public function _initTimeZone(Yaf_Dispatcher $dispatcher) {
@@ -22,5 +19,10 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
     
     public function _initRouter(Yaf_Dispatcher $dispather) {
         
+    }
+    
+    public function _initPlugin(Yaf_Dispatcher $dispatcher) {
+        $userPlugin = new UserPlugin();
+        $dispatcher->registerPlugin($userPlugin);
     }
 }
