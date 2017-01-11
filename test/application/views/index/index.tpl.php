@@ -2488,78 +2488,25 @@
   </ul>
 </li>
 
-              
-            </ul>
-            <a class="back-to-top" href="#top">
-              返回顶部
-            </a>
+</ul>
+
+<a class="back-to-top" href="#top">
+  返回顶部
+</a>
             
-            <a href="#" class="bs-docs-theme-toggle" role="button">
-              主题预览
-            </a>
-            
-          </div>
-        </div>
       </div>
     </div>
-
-    <!-- Footer
-================================================== -->
-<footer class="bs-docs-footer" role="contentinfo">
-  <div class="container">
-    
-
-    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>.</p>
-    <p>Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-    <p>本项目源码受 <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a> 开源协议保护，文档受 <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> 开源协议保护。</p>
-    <ul class="bs-docs-footer-links muted">
-      <li>当前版本： v3.3.0</li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap">GitHub 仓库</a></li>
-      <li>&middot;</li>
-      <li><a href="../getting-started/#examples">实例精选</a></li>
-      <li>&middot;</li>
-      <li><a href="http://v2.bootcss.com/">v2.3.2 中文文档</a></li>
-      <li>&middot;</li>
-      <li><a href="../about/">关于</a></li>
-      <li>&middot;</li>
-      <li><a href="http://expo.bootcss.com">优站精选</a></li>
-      <li>&middot;</li>
-      <li><a href="http://blog.getbootstrap.com">官方博客</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/twbs/bootstrap/releases">历史版本</a></li>
-    </ul>
   </div>
-</footer>
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-
-
-  <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-
-
-  <script src="../assets/js/docs.min.js"></script>
-
-
-
-
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="<?php echo $this->getJs("docs.min.js"); ?>"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
-
-<!-- Analytics
-================================================== -->
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbdb993b828cbe079a7fbc1a951f44726' type='text/javascript'%3E%3C/script%3E"));
-</script>
+<script src="<?php echo $this->getJs("ie10-viewport-bug-workaround.js"); ?>"></script>
 
   </body>
 </html>
