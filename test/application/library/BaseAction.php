@@ -12,4 +12,8 @@ class BaseAction extends Yaf_Action_Abstract {
     public function getImg($imgFileName) {
         return IMG_PATH . $imgFileName;
     }
+    
+    public function execute() {
+        
+    }
 }
