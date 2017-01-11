@@ -1,5 +1,6 @@
 <?php
 
+define("APP", $_SERVER["APP"]);
 define("APP_PATH", realpath(dirname(__FILE__) . '/../'));
 define("CONF_PATH", APP_PATH . "/conf/");
 define("CONF_FILE", CONF_PATH . "/application.ini");
